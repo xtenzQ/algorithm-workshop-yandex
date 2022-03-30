@@ -8,26 +8,25 @@ internal class ProblemAKtTest {
 
     @Test
     fun symbolFound() {
-        val input = "12123"
-        assertEquals(1, findX(input, '2'))
+        val input = intArrayOf(1, 2, 1, 2, 3)
+        val expected = 1
+        val actual = findX(input, 2)
+        assertEquals(expected, actual)
     }
 
     @Test
     fun symbolNotFound() {
-        val input = "123545431"
-        assertEquals(-1, findX(input, '9'))
+        val input = intArrayOf(1, 2, 3, 5, 4, 5, 4, 3, 1)
+        val expected = -1
+        val actual = findX(input, 9)
+        assertEquals(expected, actual)
     }
 
     @Test
     fun emptyInput() {
-        val input = ""
-        assertEquals(-1, findX(input, '9'))
+        val input = intArrayOf()
+        val expected = -1
+        val actual = findX(input, 9)
+        assertEquals(expected, actual)
     }
-
-    @Test
-    fun allCharsAreSame() {
-        val input = "1111111111111"
-        assertEquals(0, findX(input, '1'))
-    }
-
 }
