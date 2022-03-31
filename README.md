@@ -7,7 +7,7 @@ My solutions in Kotlin to Algorithms Workshop by Yandex
 
 | # | Title | YT link | Solution | Tests | Status |
 | - | ----- | ------- | -------- | ----- | ------ |
-| 1 | Linear search | <a href="https://www.youtube.com/watch?v=QLhqYNsPIVo" target="_blank">Lecture #1</a> | **[linear_search/Problems.kt](src/main/kotlin/linear_search/Problems.kt)** | **[src/test/kotlin/linear_search/](src/test/kotlin/linear_search)** | <img src="https://img.shields.io/badge/Finished-green?style=flat-square&logoColor=white" /> |
+| 1 | Linear search | <a href="https://www.youtube.com/watch?v=QLhqYNsPIVo" target="_blank">Lecture #1</a> | **[Problems.kt](src/main/kotlin/linear_search/Problems.kt)** | **[linear_search](src/test/kotlin/linear_search)** | <img src="https://img.shields.io/badge/Finished-green?style=flat-square&logoColor=white" /> |
 | 2 | Sets | <a href="https://www.youtube.com/watch?v=PUpmV2ieIHA" target="_blank">Lecture #2</a> | | | <img src="https://img.shields.io/badge/In Plans-red?style=flat-square&logoColor=white" /> |
 | 3 | Dictionaries and count sort | <a href="https://www.youtube.com/watch?v=Nb5mW1yWVSs" target="_blank">Lecture #3</a> | | | <img src="https://img.shields.io/badge/In Plans-red?style=flat-square&logoColor=white" /> |
 | 4 | Prefix sums and two pointers | <a href="https://www.youtube.com/watch?v=de28y8Dcvkg" target="_blank">Lecture #4</a> | | | <img src="https://img.shields.io/badge/In Plans-red?style=flat-square&logoColor=white" /> |
