@@ -143,6 +143,10 @@ fun findShortestWords(words: List<String>): String {
  * s w s s s w w s
  * s w s s s w w s
  * s s s s s s s s s
+ *
+ * @param listOfHeights array containing columns of an island
+ *
+ * @return number of water blocks
  */
 fun picCraft(listOfHeights: IntArray): Int {
     var peakPos = 0
@@ -167,4 +171,36 @@ fun picCraft(listOfHeights: IntArray): Int {
         result += localPeak - listOfHeights[currentPosition]
     }
     return result
+}
+
+/**
+ * Problem H.
+ *
+ * Reduce the string AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBB in a way like this:
+ * A4B3C2XYZD4E3F3A6B5
+ *
+ * @param input string
+ *
+ * @return reduced string
+ */
+fun doRLE(input: String): String {
+    fun pack(symbol: Char, count: Int): String {
+        if (count > 1) {
+            return symbol + count.toString()
+        }
+        return symbol.toString()
+    }
+
+    var lastSymbol = input[0]
+    var lastPosition = 0
+    var answer = arrayListOf<String>()
+    for (currentPosition in input.indices) {
+        if (input[currentPosition] != lastSymbol) {
+            answer.add(pack(lastSymbol, currentPosition - lastPosition))
+            lastPosition = currentPosition
+            lastSymbol = input[currentPosition]
+        }
+    }
+    answer.add(pack(input[lastPosition], input.length - lastPosition))
+    return answer.joinToString(separator = "")
 }
