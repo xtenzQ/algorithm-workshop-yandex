@@ -129,3 +129,42 @@ fun findShortestWords(words: List<String>): String {
     }
     return answer.joinToString(separator = " ")
 }
+
+/**
+ * Problem G.
+ * PitCraft is a 2D game and its work consists of 1x1 blocks. Player's island is a set of columns of a different
+ * height and includes water blocks and stone blocks. After a heavy rain, the island was flooded and filled the low
+ * ground.
+ *
+ * Picture below illustrates the island. s is a stone block, w is a water block.
+ *
+ *         s
+ *     s w s
+ * s w s s s w w s
+ * s w s s s w w s
+ * s s s s s s s s s
+ */
+fun picCraft(listOfHeights: IntArray): Int {
+    var peakPos = 0
+    for (currentPosition in listOfHeights.indices) {
+        if (listOfHeights[currentPosition] > listOfHeights[peakPos]) {
+            peakPos = currentPosition
+        }
+    }
+    var result = 0
+    var localPeak = 0
+    for (currentPosition in 0 until peakPos) {
+        if (listOfHeights[currentPosition] > localPeak) {
+            localPeak = listOfHeights[currentPosition]
+        }
+        result += localPeak - listOfHeights[currentPosition]
+    }
+    localPeak = 0
+    for (currentPosition in listOfHeights.size - 1 downTo peakPos) {
+        if (listOfHeights[currentPosition] > localPeak) {
+            localPeak = listOfHeights[currentPosition]
+        }
+        result += localPeak - listOfHeights[currentPosition]
+    }
+    return result
+}
