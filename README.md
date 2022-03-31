@@ -7,4 +7,4 @@ My solutions in Kotlin to Algorithms Workshop by Yandex
 
 | # | Title | YT link | Solution | Tests | Status |
 | - | ----- | ------- | -------- | ----- | ------ |
-| 1 | Linear search | <a href="https://www.youtube.com/watch?v=QLhqYNsPIVo" target="_blank">Lecture #1</a> | **[src/main/kotlin/linear_search](src/main/kotlin/linear_search)** | **[src/main/kotlin/linear_search](src/test/kotlin/linear_search)** | <img src="https://img.shields.io/badge/In Progress-orange?style=flat-square&logoColor=white" /> |
+| 1 | Linear search | <a href="https://www.youtube.com/watch?v=QLhqYNsPIVo" target="_blank">Lecture #1</a> | **[linear_search/Problems.kt](src/main/kotlin/linear_search/Problems.kt)** | **[src/test/kotlin/linear_search/](src/test/kotlin/linear_search)** | <img src="https://img.shields.io/badge/In Progress-orange?style=flat-square&logoColor=white" /> |
